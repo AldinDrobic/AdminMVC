@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AdminMVC.Models.Kund>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Förnamn
+        </th>
+        <th>
+            Efternamn
+        </th>
+        <th>
+            Personnummer
+        </th>
+        <th>
+            Telefonnummer
+        </th>
+        <th>
+            Bonuspoäng
+        </th>
+        <th>
+            Inloggningsid
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fornamn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Efternamn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonNr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonNr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bonuspoang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InloggningsId)
+            </td>
+            <td>
+                @Html.ActionLink("Redigera", "PutKund", new { id = item.InloggningsId }) |
+                @*@Html.ActionLink("Ta bort", "DeleteKund", new { id = item.InloggningsId })*@
+                @using (Html.BeginForm("DeleteKund", "Kund", new { id = item.InloggningsId }, FormMethod.Post, new { onsubmit = "return confirm('Är du säker på att du vill radera kunden?');" }))
+                {
+                    @Html.AntiForgeryToken();
+                    <input type="submit" value="Radera"/>
+                }
+            </td>
+        </tr>
+    }
+
+</table>

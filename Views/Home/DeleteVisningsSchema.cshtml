@@ -1,0 +1,35 @@
+﻿@model AdminMVC.Models.VisningsSchema
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+<h1 class="titel">Är du säker på att du vill radera visningen?</h1>
+<div class="centralisera">
+
+    <div>
+        <hr />
+
+        <div class="visa">
+            <strong>Film: </strong>
+            @Html.DisplayFor(model => model.FilmTitel)
+        </div>
+
+        <div class="visa">
+            <strong>Salong: </strong>
+            @Html.DisplayFor(model => model.SalongsNamn)
+        </div>
+
+        <div class="visa">
+            <strong>Tid: </strong>
+            @Html.DisplayFor(model => model.Visningstid)
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div>
+                <input type="submit" value="Ta bort" class="formBtn" /> |
+                @Html.ActionLink("Tillbaka", "GetVisningsSchema")
+            </div>
+        }
+    </div>
+</div>

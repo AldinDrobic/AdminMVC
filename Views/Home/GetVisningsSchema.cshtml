@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AdminMVC.Models.VisningsSchema>
+
+
+<p>
+    @Html.ActionLink("Skapa ny visning", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Film
+        </th>
+        <th>
+            Salong
+        </th>
+        <th>
+            Tid
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmTitel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalongsNamn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Visningstid)
+            </td>
+            <td>
+                @Html.ActionLink("Redigera", "PutVisningsSchema", new { id = item.Id }) |
+                @Html.ActionLink("Ta bort", "DeleteVisningsSchema", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

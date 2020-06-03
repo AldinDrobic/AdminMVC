@@ -1,0 +1,58 @@
+﻿@model AdminMVC.Models.Kund
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+<h1 class="titel">Är du säker på att du vill ta bort kunden?</h1>
+<div>
+
+    <div class="centralisera">
+        <div>
+            <div class="visa">
+                <strong>Email: </strong>
+                @Html.DisplayFor(model => model.Email)
+            </div>
+            <div class="visa">
+                <strong>Lösenord: </strong>
+                @Html.DisplayFor(model => model.Losenord)
+            </div>
+            <div class="visa">
+                <strong>Inloggningsid: </strong>
+                @Html.DisplayFor(model => model.InloggningsId)
+            </div>
+
+            <div class="visa">
+                <strong>Förnamn: </strong>
+                @Html.DisplayFor(model => model.Fornamn)
+            </div>
+
+            <div class="visa">
+                <strong>Efternamn: </strong>
+                @Html.DisplayFor(model => model.Efternamn)
+            </div>
+
+            <div class="visa">
+                <strong>Personnummer: </strong>
+                @Html.DisplayFor(model => model.PersonNr)
+            </div>
+
+            <div class="visa">
+                <strong>Telefonnummer: </strong>
+                @Html.DisplayFor(model => model.TelefonNr)
+            </div>
+
+            <div class="visa">
+                <strong>Bonuspoäng: </strong>
+                @Html.DisplayFor(model => model.Bonuspoang)
+            </div>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div>
+                    <input type="submit" value="Ta bort" class="formBtn" /> |
+                    @Html.ActionLink("Tillbaka", "GetKund")
+                </div>
+            }
+        </div>
+    </div>
+</div>

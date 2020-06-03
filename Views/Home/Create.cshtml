@@ -1,0 +1,43 @@
+﻿@model AdminMVC.Models.VisningsSchema
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+<h1 class="titel">Skapa en ny visning</h1>
+
+
+@using (Html.BeginForm())
+{
+    <div class="centralisera">
+        <div>
+            <div class="visa">
+                <strong>Välj filmtitel</strong> <br />
+                @Html.DropDownListFor(model => model.FilmTitel, new SelectList(ViewBag.filmtitelLista), "Välj en film", new { @class = "inputRutor" })
+                @Html.ValidationMessageFor(model => model.TitelLista)
+            </div>
+
+
+
+            <div class="visa">
+                <strong>Välj salong</strong> <br />
+                @Html.DropDownListFor(model => model.SalongsNamn, new SelectList(ViewBag.salongnamnLista), "Välj en salong", new { @class = "inputRutor" })
+                @Html.ValidationMessageFor(model => model.SalongsNamn)
+
+            </div>
+
+            <div class="visa">
+
+                <strong>Ange datum & tid </strong> <br />
+                @Html.TextBoxFor(model => model.Visningstid, new { Type = "datetime-local", @class = "inputRutor" })
+                @Html.ValidationMessageFor(model => model.Visningstid)
+
+
+            </div>
+
+            <div>
+                <input type="submit" value="Skapa" class="formBtn" /> |
+                @Html.ActionLink("Tillbaka", "GetVisningsSchema")
+            </div>
+        </div>
+    </div>
+}
+
+

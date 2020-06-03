@@ -1,0 +1,27 @@
+﻿@model AdminMVC.Models.PersonalModel
+<html>
+<head>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+</head>
+
+
+<body>
+
+    <h1 class="titel">Du är nu inloggad som kundadministratör)</h1> <br />
+
+    <div class="indexVisa">
+
+        I denna del av systemet kan du skapa nya visningstillfällen, se alla visningar och ändra en visning ifall det behövs.
+        Här kan du även hantera kundprofiler ifall någon kund skulle behöva assistans kring det. <br /> <br /> <br />
+       
+        <div class="indexVisar">
+           Vill du hantera visningar tryck här @Html.ActionLink("Visningsschema", "GetVisningsSchema", "Home") <br />
+           Vill du hantera kunder tryck här @Html.ActionLink("Kunder", "GetKund", "Kund")  <br />
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

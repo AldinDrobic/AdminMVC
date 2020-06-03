@@ -1,0 +1,12 @@
+﻿body {
+    text-align:center;
+}
+
+#loggintxt {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+.formtxt{
+    margin: 10px;
+}

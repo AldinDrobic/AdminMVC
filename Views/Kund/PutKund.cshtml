@@ -1,0 +1,67 @@
+﻿@model AdminMVC.Models.Kund
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+<h1 class="titel">Ändra kund?</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div class="centralisera">
+        <div class="visa">
+            <strong>Inloggningsid</strong>
+            @Html.EditorFor(model => model.InloggningsId)
+            @Html.ValidationMessageFor(model => model.InloggningsId)
+        </div>
+
+
+        <div class="visa">
+            <strong>Email:</strong>
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+
+        <div class="visa">
+            <strong>Lösenord:</strong>
+            @Html.EditorFor(model => model.Losenord)
+            @Html.ValidationMessageFor(model => model.Losenord)
+        </div>
+
+        <div class="visa">
+            <strong>Förnamn:</strong>
+            @Html.EditorFor(model => model.Fornamn)
+            @Html.ValidationMessageFor(model => model.Fornamn)
+        </div>
+
+
+        <div class="visa">
+            <strong>Efternamn:</strong>
+            @Html.EditorFor(model => model.Efternamn)
+            @Html.ValidationMessageFor(model => model.Efternamn)
+        </div>
+
+        <div class="visa">
+            <strong>Personnummer:</strong>
+            @Html.EditorFor(model => model.PersonNr)
+            @Html.ValidationMessageFor(model => model.PersonNr)
+        </div>
+
+        <div class="visa">
+            <strong>Telefonnummer:</strong>
+            @Html.EditorFor(model => model.TelefonNr)
+            @Html.ValidationMessageFor(model => model.TelefonNr)
+        </div>
+
+        <div class="visa">
+            <strong>Bonuspoäng:</strong>
+            @Html.EditorFor(model => model.Bonuspoang)
+            @Html.ValidationMessageFor(model => model.Bonuspoang)
+        </div>
+
+        <div>
+            <input type="submit" value="Uppdatera" class="formBtn" /> |
+            @Html.ActionLink("Tillbaka", "GetKund")
+        </div>
+    </div>
+}
+

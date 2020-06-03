@@ -1,0 +1,20 @@
+﻿@model AdminMVC.Models.PersonalModel
+<link href="~/Content/CenterLoggin.css" rel="stylesheet" />
+
+<div class="centerbody">
+    <h2 id="loggintxt">Logga in som kundadmin</h2>
+
+    @using (Html.BeginForm())
+    {
+            
+            <div class="formtxt">Användarnamn</div>
+            <div class="formtxt">@Html.EditorFor(m => m.AnvandarNamn) </div>
+            <div class="formtxt">Lösenord</div>
+            <div class="formtxt">@Html.PasswordFor(m => m.Losenord)</div>
+            <br />
+            <input type="submit" value="Logga in" />
+            <div>
+                @Html.ValidationSummary()
+            </div>
+    }
+</div>

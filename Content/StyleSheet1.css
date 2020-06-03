@@ -1,0 +1,73 @@
+﻿.navbar {
+    background-color: #6f191c !important;
+    font-size: 20px;
+}
+
+    .navbar .navbar-brand {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .navbar .navbar-nav li a {
+        color: #fff !important;
+        font-size: 20px;
+    }
+
+.navbar-light .navbar-toggler {
+    color: white !important;
+    background-color: white !important;
+    border-color: white !important;
+    font-size: 20px;
+}
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+
+}
+
+
+
+/*Allt nedanför används i Home vyerna.*/
+.titel {
+    text-align: center;
+    font-size: 55px;
+}
+
+.centralisera {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 300px;
+    left: 750px;
+}
+
+.visa {
+    margin: 10px;
+    font-size: 25px;
+}
+
+.inputRutor {
+    left: 100px;
+}
+
+
+.formBtn {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.indexVisa {
+    width: 1520px;
+    height: 1500px;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    font-size: 30px;
+}
+
+.indexVisar {
+    position: absolute;
+    top: 150px;
+    left: 350px;
+}
